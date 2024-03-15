@@ -6,11 +6,6 @@ public class Main {
             DBManager.inTransaction(() -> {
                 UserRepository userRepository = new UserRepository();
                 userRepository.addUser("John");
-
-                if (args.length == 0) {
-                    throw new RuntimeException("sdfsdfdsf");
-                }
-
                 ProductRepository productRepository = new ProductRepository();
                 productRepository.addProduct("Phone", 23);
             });
